@@ -27,10 +27,11 @@ Probably most useful are:
 * To compile and package the jar (also runs the unit tests): mvn package
 * To just run the tests: mvn test
 * To run the jar: jpa-perf-test.sh or java -jar target/jpa-perf-test.jar
-* Options
-** -n Number of iterations - default 1000
-** -o Number of unique objects for query testing - default 10
-** -q Number of unique objects for bulk query testing - default 1000
+
+Options
+* -n Number of iterations - default 1000
+* -o Number of unique objects for query testing - default 10
+* -q Number of unique objects for bulk query testing - default 1000
 
 
 
