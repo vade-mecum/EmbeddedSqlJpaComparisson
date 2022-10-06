@@ -7,15 +7,15 @@
  *
  */
 
-package com.pricer.engine;
+package com.jpa.test.engine;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 
-public class H2EngineTest extends EngineTest{
+public class HsqldbEngineTest extends EngineTest{
     @BeforeAll
     static void setUp() {
-        engine = new Engine("h2-test");
+        engine = new Engine("hsqldb-test");
     }
     @AfterAll
     static void tearDown() {

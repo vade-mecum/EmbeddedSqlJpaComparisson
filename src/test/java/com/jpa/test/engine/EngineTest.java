@@ -7,11 +7,12 @@
  *
  */
 
-package com.pricer.engine;
+package com.jpa.test.engine;
 
-import com.pricer.data.EmbeddedData;
-import com.pricer.data.EmbeddedDataDto;
-import com.pricer.data.TestData;
+import com.jpa.test.data.EmbeddedData;
+import com.jpa.test.data.EmbeddedDataDto;
+import com.jpa.test.data.TestData;
+import com.jpa.test.util.ClosableTransaction;
 import lombok.Cleanup;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
@@ -86,6 +87,7 @@ abstract class EngineTest {
                             .build())
                     .data1("data 1 value")
                     .data2("data 2")
+                    .subtype(randSubtype())
                     .build();
             trans.em().persist(d);
         }
@@ -123,5 +125,13 @@ abstract class EngineTest {
         // cnt
 
         assertThat(EmbeddedData.cnt(engine.em)).isEqualTo(10);
+    }
+
+    private EmbeddedData.SubType randSubtype() {
+        return switch ((int) (Math.random() * 3)) {
+            case 0 -> EmbeddedData.SubType.BLUE;
+            case 1 -> EmbeddedData.SubType.RED;
+            default -> EmbeddedData.SubType.GREEN;
+        };
     }
 }

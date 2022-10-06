@@ -1,10 +1,13 @@
 /*
- * No Copyright
- * @author josueribeiro@github.com
+ * Copyright (c) 2022. Vade Mecum Ltd. All Rights Reserved.
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  *
  */
 
-package com.pricer.util;
+package com.jpa.test.util;
 
 import org.hibernate.dialect.Dialect;
 import org.hibernate.dialect.function.SQLFunctionTemplate;

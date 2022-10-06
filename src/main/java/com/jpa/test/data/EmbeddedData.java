@@ -7,7 +7,7 @@
  *
  */
 
-package com.pricer.data;
+package com.jpa.test.data;
 
 import lombok.*;
 import lombok.experimental.Accessors;
@@ -42,6 +42,12 @@ public class EmbeddedData {
     @Getter@Setter
     private String data3 = "";
 
+    @Builder.Default
+    @Getter@Setter
+    @Enumerated(EnumType.STRING)
+    private SubType subtype = SubType.RED;
+
+    public enum SubType {RED, BLUE, GREEN}
     @Embeddable
     @Builder
     @AllArgsConstructor
@@ -69,13 +75,15 @@ public class EmbeddedData {
                 .data1(data1)
                 .data2(data2)
                 .data3(data3)
+                .subtype(subtype)
                 .build();
     }
 
     public void update(EmbeddedDataDto newVersion) {
         data1(newVersion.data1())
                 .data2(newVersion.data2())
-                .data3(newVersion.data3());
+                .data3(newVersion.data3())
+                .subtype(newVersion.subtype());
     }
 
     static public List<EmbeddedData> all(EntityManager em) {

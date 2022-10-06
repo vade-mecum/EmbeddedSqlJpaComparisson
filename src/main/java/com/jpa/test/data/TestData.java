@@ -7,7 +7,7 @@
  *
  */
 
-package com.pricer.data;
+package com.jpa.test.data;
 
 import lombok.*;
 import lombok.experimental.Accessors;

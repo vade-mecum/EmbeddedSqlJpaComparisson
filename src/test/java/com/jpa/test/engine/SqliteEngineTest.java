@@ -7,7 +7,7 @@
  *
  */
 
-package com.pricer.engine;
+package com.jpa.test.engine;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;

@@ -7,7 +7,9 @@
  *
  */
 
-package com.pricer.engine;
+package com.jpa.test.engine;
+
+import com.jpa.test.util.ClosableTransaction;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

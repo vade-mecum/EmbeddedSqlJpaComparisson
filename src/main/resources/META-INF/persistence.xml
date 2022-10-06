@@ -53,7 +53,7 @@
         <!--<exclude-unlisted-classes>false</exclude-unlisted-classes>-->
         <properties>
 
-            <property name="hibernate.dialect" value="com.pricer.util.SQLiteDialect"/>
+            <property name="hibernate.dialect" value="com.jpa.test.util.SQLiteDialect"/>
             <property name="javax.persistence.jdbc.driver" value="org.sqlite.JDBC"/>
             <property name="javax.persistence.jdbc.url" value="jdbc:sqlite:./sqlite/test.db"/>
             <property name="javax.persistence.jdbc.user" value=""/>

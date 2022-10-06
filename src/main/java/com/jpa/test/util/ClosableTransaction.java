@@ -7,7 +7,7 @@
  *
  */
 
-package com.pricer.engine;
+package com.jpa.test.util;
 
 import lombok.Getter;
 import lombok.experimental.Accessors;

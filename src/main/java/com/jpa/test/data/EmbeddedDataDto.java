@@ -7,7 +7,7 @@
  *
  */
 
-package com.pricer.data;
+package com.jpa.test.data;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -27,7 +27,8 @@ import java.io.Serializable;
 @Builder
 public class EmbeddedDataDto implements Serializable {
     private EmbeddedData.CustomId id;
-    @Builder.Default private String data1 = "";
-    @Builder.Default private String data2 = "";
-    @Builder.Default private String data3 = "";
+    private String data1;
+    private String data2;
+    private String data3;
+    private EmbeddedData.SubType subtype;
 }
